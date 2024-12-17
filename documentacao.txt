@@ -1,0 +1,54 @@
+Tipos de variáveis:
+
+Const = Variável  imutável
+
+Let = Variável mutável (Permite adicionar varios valores e alterar o valor padrão)
+
+Var = Variável mutável (Mesma função do let, mas funciona em qualquer contexto,
+mas é muito menos utilizada por causa de erros)
+
+
+Diferença entre Strim e Template String:
+
+A string e a template string são duas formas de lidar com textos em JavaScript.
+A principal diferença está na sintaxe e nas funcionalidades que a template string oferece em comparação com a string tradicional.
+
+String (String tradicional)
+Utiliza aspas simples (') ou duplas (") para definir o texto.
+Não suporta interpolação diretamente.
+Para concatenar valores ou variáveis, é necessário usar o operador +.
+
+const nome = "João";
+const idade = 25;
+
+// Concatenando strings com o operador +
+const mensagem = "Meu nome é " + nome + " e eu tenho " + idade + " anos.";
+console.log(mensagem);
+// Saída: Meu nome é João e eu tenho 25 anos.
+
+
+
+Template String
+Utiliza crase (backtick) ` para definir o texto.
+Permite interpolação de variáveis e expressões usando ${} dentro do texto.
+Aceita múltiplas linhas sem a necessidade de concatenação.
+Facilita a escrita de textos dinâmicos e mais legíveis.
+
+const nome = "João";
+const idade = 25;
+
+// Usando template string com interpolação
+const mensagem = `Meu nome é ${nome} e eu tenho ${idade} anos.`;
+console.log(mensagem);
+// Saída: Meu nome é João e eu tenho 25 anos.
+
+// Suporte a múltiplas linhas
+const texto = `Esta é uma mensagem
+que ocupa múltiplas linhas
+sem precisar concatenar.`;
+console.log(texto);
+/* Saída:
+Esta é uma mensagem
+que ocupa múltiplas linhas
+sem precisar concatenar.
+*/
