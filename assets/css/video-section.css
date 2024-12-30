@@ -1,0 +1,180 @@
+#video-section {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.video-content {
+  width: 200px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-content .icons {
+  display: flex;
+  gap: 20px;
+}
+
+.video-content h2 {
+  color: #ffffff50;
+  font-size: 32px;
+  font-weight: 200;
+  transition: all 0.4s ease;
+}
+
+.video-content h2:hover {
+  color: #ffffff;
+}
+
+.icons-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+/* 
+.icon-design {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon/pen-tool.svg);
+  background-image: cover;
+}
+
+.icon-dev {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon/code.svg);
+  background-image: cover;
+}
+
+.icon-motion {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon/motion.svg);
+  background-image: cover;
+}
+
+.icon-3d {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon/3d.svg);
+  background-image: cover;
+} */
+
+.video-container {
+  position: relative;
+  width: 850px;
+  /* 16:9 => 9/16 = 0.5625 => 56.25% 
+       Se quiser outra proporção, troque esse valor */
+  padding-bottom: 56.25%;
+  /* você pode usar outra proporção, por ex. 75% para 4:3 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* O iframe se ajusta ao tamanho do container */
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Animação dos icones */
+
+.skew-me {
+  transform-origin: center;
+  animation: skew3D 2s infinite ease-in-out;
+  display: block;
+}
+@keyframes skew3D {
+  0% {
+    transform: skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+
+  50% {
+    transform: skewX(5deg) skewY(10deg) rotate(4deg);
+  }
+  100% {
+    transform: skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+}
+
+.motion {
+  transform-origin: center;
+  animation: rotation 5s infinite ease-in-out;
+  display: block;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.code {
+  transform-origin: center;
+  display: block;
+}
+
+.code #dev1 {
+  transform-origin: center;
+  animation: move 5s infinite ease;
+  display: block;
+}
+
+.code #dev2 {
+  transform-origin: center;
+  animation: moveIn 5s infinite ease;
+  display: block;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* CSS específico para o path a ser animado */
+#pentool {
+  fill: none; /* remove o preenchimento para destacar o stroke */
+  stroke-dasharray: 100; /* valor >= comprimento do path */
+  stroke-dashoffset: 300; /* inicia “escondido” */
+  animation: draw 5s ease-out infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; /* vai até 0, “desenhando” o traço */
+  }
+}

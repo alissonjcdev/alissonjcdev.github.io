@@ -1,0 +1,94 @@
+.hero {
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 160px 0 80px 0;
+}
+
+.divider-hero {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #008080, #ff4900);
+}
+
+.hero-content {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 2;
+}
+
+.hero-content h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.hero-content h2 {
+  font-size: 72px;
+  font-weight: 300;
+}
+
+.hero-description {
+  max-width: 435px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+}
+
+.hero-description h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.hero-description h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #949494;
+}
+
+.hero-description a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.hero-description a::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 4em;
+  height: 1px;
+  background: linear-gradient(90deg, #008080, #ff4900);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.hero-description:hover {
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.hero-description a:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.4s ease;
+}
+
+.hero-foto {
+  width: 285px;
+  height: 335px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/EDIÇÃO-PHOTO-01---ALISSON\ 2.webp);
+  z-index: 2;
+}

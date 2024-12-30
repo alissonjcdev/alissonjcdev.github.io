@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pen-tool" clip-path="url(#clip0_3583_31383)">
+<path id="pentool" d="M1 1L16.95 4.85L18.6 13.1L13.1 18.6L4.85 16.95L1 1ZM1 1L9.3446 9.3446M12 19.7L19.7 12L23 15.3L15.3 23L12 19.7ZM13.1001 10.9C13.1001 12.115 12.1151 13.1 10.9001 13.1C9.68503 13.1 8.70006 12.115 8.70006 10.9C8.70006 9.68498 9.68503 8.7 10.9001 8.7C12.1151 8.7 13.1001 9.68498 13.1001 10.9Z" stroke="url(#paint0_linear_3583_31383)" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3583_31383" x1="1" y1="1" x2="27.4" y2="23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#008080"/>
+<stop offset="1" stop-color="#FF4900"/>
+</linearGradient>
+<clipPath id="clip0_3583_31383">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
