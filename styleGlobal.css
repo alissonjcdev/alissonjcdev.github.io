@@ -246,3 +246,44 @@ main .container {
     background-color: #ffffff10;
   }
 }
+
+/* .screen-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+} */
+
+/* .loader {
+  position: relative;
+  width: 300px;
+  height: 2px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+} */
+
+/* .loader::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #3498db;
+  animation: loading 4s linear forwards;
+} */
+
+/* Animação que vai de 0% a 100% da barra */
+/* @keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+} */
