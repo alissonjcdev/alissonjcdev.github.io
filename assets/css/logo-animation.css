@@ -1,0 +1,22 @@
+.logo-animation {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  position: relative;
+  overflow: hidden; /* Evita rolagem extra */
+}
+
+.shape {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 0;
+  position: fixed; /* Fixa o shape na tela */
+  top: 50%; /* Para centralizar verticalmente */
+  left: 50%; /* Para centralizar horizontalmente */
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Garante que o shape fique sobre as seções */
+}

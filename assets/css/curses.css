@@ -1,0 +1,287 @@
+.curses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #121212;
+  background-color: #010101;
+}
+
+.curses .container {
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  justify-content: flex-start;
+}
+
+.curses .curses__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* padding: 80px 40px; */
+  width: 820px;
+  height: 300px;
+  flex-direction: column;
+  gap: 28px;
+  /* border-left: 1px solid #121212; */
+  border-right: 1px solid #121212;
+}
+
+.curses .curses__content h2 {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.curses .curses__content h3 {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 28px;
+  color: #949494;
+}
+
+.curses .curses__arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  height: 300px;
+  border-right: 1px solid #121212;
+}
+/* __________________________________________ */
+
+.curses__list {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 80px 0 80px 0;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #121212;
+  background-color: #010101;
+}
+
+.curses__list .container {
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.curses__list .curse-item {
+  position: relative;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.curses__list .curse-item h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.curses__list .curse-item h3 {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 28px;
+  color: #949494;
+}
+
+.curses__list .curse-item .curse__img {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 2px;
+  background-color: #121212;
+  overflow: hidden;
+}
+
+.curses__list .curse-item .curse__img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .curses__list .curse-item .curse__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff20;
+  opacity: 0;
+}
+
+.curses__list .curse-item .curse__img:hover::before {
+  background: #ffffff20;
+  opacity: 1;
+} */
+
+.curses__list .curse-item a {
+  text-decoration: none;
+  width: fit-content;
+  text-align: center;
+  border-radius: 100px;
+  color: #fff;
+  border: 1px solid #ffffff15;
+  font-size: 16px;
+  padding: 17px 32px;
+  background-color: transparent;
+}
+
+.curses__list .curse-item .seta {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  transition: all 0.4s ease;
+  transform: translate(50%, -50%) scale(0);
+}
+
+.curses__list .curse-item:hover .seta {
+  opacity: 1;
+  transform: translate(50%, -50%) scale(1.2);
+}
+
+/* 
+teste??? */
+
+#circle0 {
+  animation: circle 3s infinite ease;
+}
+
+#circle2 {
+  animation: circle2 3s infinite ease;
+}
+
+/* #circle2 {
+  position: absolute;
+  transform: translateX(20px);
+} */
+
+@keyframes circle {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes circle2 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .curses .container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+
+  .curses .curses__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 80px 40px; */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 28px;
+    /* border-left: 1px solid #121212; */
+    border: none;
+  }
+
+  .curses .curses__content h2 {
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .curses .curses__content h3 {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 28px;
+    text-align: center;
+    color: #949494;
+  }
+
+  .curses .curses__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+
+  .curses__list {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .curses__list {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding: 80px 0 80px 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #121212;
+    background-color: #010101;
+  }
+
+  .curses__list .container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 80px;
+  }
+
+  .curses__list .curse-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .curses__list .curse-item a {
+    width: 100%;
+  }
+
+  .curses__list .curse-item .curse__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #121212;
+    overflow: hidden;
+  }
+
+  .curses__list .curse-item .curse__img img {
+    width: 100%;
+    height: 100%;
+  }
+}

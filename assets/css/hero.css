@@ -1,11 +1,13 @@
 .hero {
   display: flex;
-  width: 100%;
-  max-width: 1240px;
   height: auto;
   align-items: center;
+  justify-content: center;
+  padding: 200px 0 140px 0;
+}
+
+.hero .container {
   justify-content: space-between;
-  padding: 160px 0 80px 0;
 }
 
 .divider-hero {
@@ -15,9 +17,9 @@
 }
 
 .hero-content {
+  display: flex;
   max-width: 320px;
   width: 100%;
-  display: flex;
   flex-direction: column;
   gap: 50px;
   z-index: 2;
@@ -55,13 +57,17 @@
 }
 
 .hero-description a {
+  width: fit-content;
+  border-radius: 100px;
   position: relative;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000;
   text-decoration: none;
   font-size: 16px;
+  padding: 17px 24px;
 }
 
-.hero-description a::before {
+/* .hero-description a::before {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -81,14 +87,111 @@
 .hero-description a:hover::before {
   transform: scaleX(1);
   transition: transform 0.4s ease;
-}
+} */
 
 .hero-foto {
-  width: 285px;
-  height: 335px;
+  display: flex;
+  max-width: 345px;
+  width: 100%;
+  height: 395px;
+  position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(/assets/img/EDIÇÃO-PHOTO-01---ALISSON\ 2.webp);
   z-index: 2;
+}
+
+.hero-content h3 span {
+  animation: rotate 4s ease infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 140px 20px 80px 20px;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero .container .hero-content:nth-child(1) {
+    display: flex;
+    order: 1;
+  }
+
+  .hero .container .hero-foto {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 100px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("/assets/img/EDIÇÃO-PHOTO-01---ALISSON\ 2.webp");
+    background-position: top;
+    background-size: cover;
+    margin-bottom: -120px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    width: 100%;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .hero-content h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 52px;
+    text-align: center;
+  }
+
+  .hero-description {
+    order: 2;
+    max-width: 100%;
+    width: 100%;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .hero-description h2 {
+    width: 340px;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .hero-description h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .hero-description a {
+    width: 100%;
+    text-align: center;
+    border-radius: 100px;
+    padding: 17px 24px;
+  }
 }

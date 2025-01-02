@@ -1,0 +1,156 @@
+.text-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.text-section .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.text-section h2 {
+  font-size: 64px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#contato .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#contato .container span {
+  font-size: 24px;
+  font-weight: 300;
+  color: #949494;
+}
+
+#contato .container h3 {
+  padding: 8px 20px 8px 12px;
+  background-color: #22bf0a20;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 2px;
+  gap: 10px;
+  font-weight: 300;
+}
+
+#contato .container h3 .disp {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #22bf0a;
+  animation: opacity 2s infinite;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#contato .container a {
+  display: flex;
+  gap: 10px;
+  padding: 17px 24px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid #ffffff10;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#contato .container a:hover {
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#contato .container a svg {
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+#contato .container a:hover svg {
+  color: #000000;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 150;
+  animation: drawing 2s ease forwards;
+}
+
+@keyframes drawing {
+  0% {
+    stroke-dashoffset: 150;
+  }
+}
+
+.img-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background-image: url(/assets/img/imgAlisson.webp);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contato-end {
+  background-color: #0f0f0f;
+}
+
+@media (max-width: 767px) {
+  .text-section .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  .text-section h2 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  #contato .container span {
+    font-size: 18px;
+    font-weight: 300;
+    color: #949494;
+  }
+}

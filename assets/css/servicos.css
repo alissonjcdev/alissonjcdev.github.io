@@ -1,0 +1,226 @@
+.servicos {
+  display: flex;
+  padding: 140px 0;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #121212;
+}
+
+.servicos .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.servicos__content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #121212;
+}
+
+.servicos__content h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #949494;
+  line-height: 30px;
+}
+
+.servicos__content h2 {
+  font-size: 42px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.servicos__box {
+  display: flex;
+  gap: 60px;
+}
+
+.servicos__box .box__item {
+  padding: 0px;
+  border-radius: 0px;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* .servicos__box .box__item:nth-child(1) {
+  border: 1px solid #00000015;
+}
+
+.servicos__box .box__item:nth-child(2) {
+  border-right: 1px solid #00000015;
+  border-top: 1px solid #00000015;
+  border-bottom: 1px solid #00000015;
+}
+
+.servicos__box .box__item:nth-child(3) {
+  border-right: 1px solid #00000015;
+  border-top: 1px solid #00000015;
+  border-bottom: 1px solid #00000015;
+} */
+
+.servicos__box .box__item h2 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.servicos__box .box__item h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #949494;
+}
+
+.servicos__box .box__item .divider {
+  position: relative;
+  width: 60%;
+  height: 1px;
+  background: #121212;
+}
+
+.servicos__box .box__item .divider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #008080, #ff4900);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+}
+
+.servicos__box .box__item:hover .divider::before {
+  transform: scaleX(1);
+}
+
+/* Animação icones dos boxes de serviços */
+
+.pen path {
+  fill: none; /* para destacar somente o stroke desenhando */
+  stroke-dasharray: 150; /* valor >= que o comprimento do path */
+  stroke-dashoffset: 150; /* igual ao dasharray, inicia "escondido" */
+  animation: draw 5s linear infinite; /* Duração de 3s, uma vez só */
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 150;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke-dashoffset: 150;
+  }
+
+  100% {
+    stroke-dashoffset: 150;
+  }
+}
+
+.layers path {
+  fill: none; /* para destacar somente o stroke desenhando */
+  stroke-dasharray: 150; /* valor >= que o comprimento do path */
+  stroke-dashoffset: 150; /* igual ao dasharray, inicia "escondido" */
+  animation: draw 5s linear infinite; /* Duração de 3s, uma vez só */
+}
+
+.globe path {
+  fill: none; /* para destacar somente o stroke desenhando */
+  stroke-dasharray: 150; /* valor >= que o comprimento do path */
+  stroke-dashoffset: 150; /* igual ao dasharray, inicia "escondido" */
+  animation: draw 5s linear infinite; /* Duração de 3s, uma vez só */
+}
+
+/* .seta-apont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: center;
+  animation: mov 5s ease infinite;
+}
+
+@keyframes mov {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: rotate(90deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    opacity: 0.3;
+  }
+} */
+
+@media (max-width: 767px) {
+  .servicos {
+    display: flex;
+    padding: 80px 20px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #121212;
+  }
+
+  .servicos .container {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .servicos__box {
+    flex-direction: column;
+  }
+
+  .servicos__box .box__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .servicos__box .box__item h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .servicos__box .box__item h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .servicos__content {
+    gap: 32px;
+  }
+
+  .servicos__content h3 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #949494;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .servicos__content h2 {
+    font-size: 42px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+  }
+}

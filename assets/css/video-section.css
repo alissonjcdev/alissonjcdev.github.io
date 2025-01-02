@@ -1,17 +1,29 @@
-#video-section {
-  width: 100%;
-  max-width: 1140px;
+.video-contain {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* padding: 80px 0; */
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+}
+
+.video-secao {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .video-content {
   width: 200px;
-  height: 470px;
+  height: 534px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 40px 0px 40px 40px;
+  border-left: 1px solid #121212;
 }
 
 .video-content .icons {
@@ -66,11 +78,14 @@
 
 .video-container {
   position: relative;
-  width: 850px;
+  width: 950px;
+  height: 534px;
   /* 16:9 => 9/16 = 0.5625 => 56.25% 
        Se quiser outra proporção, troque esse valor */
-  padding-bottom: 56.25%;
+  padding-bottom: 42.5%;
   /* você pode usar outra proporção, por ex. 75% para 4:3 */
+  border-left: 1px solid #121212;
+  border-right: 1px solid #121212;
 }
 
 .video-container iframe {
@@ -80,7 +95,6 @@
   /* O iframe se ajusta ao tamanho do container */
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
 /* Animação dos icones */
@@ -168,13 +182,83 @@
 /* CSS específico para o path a ser animado */
 #pentool {
   fill: none; /* remove o preenchimento para destacar o stroke */
-  stroke-dasharray: 100; /* valor >= comprimento do path */
-  stroke-dashoffset: 300; /* inicia “escondido” */
+  stroke-dasharray: 150; /* valor >= comprimento do path */
+  stroke-dashoffset: 150; /* inicia “escondido” */
   animation: draw 5s ease-out infinite;
 }
 
 @keyframes draw {
-  to {
-    stroke-dashoffset: 0; /* vai até 0, “desenhando” o traço */
+  0% {
+    stroke-dashoffset: 150;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke-dashoffset: 150;
+  }
+
+  100% {
+    stroke-dashoffset: 150;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-content {
+    width: 100%;
+    height: auto;
+    padding: 80px 20px 40px 20px;
+    gap: 40px;
+    border: none;
+  }
+
+  .video-content h2 {
+    color: #ffffff50;
+    font-size: 24px;
+    font-weight: 200;
+    transition: all 0.4s ease;
+  }
+
+  .icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* 16:9 => 9/16 = 0.5625 => 56.25% 
+         Se quiser outra proporção, troque esse valor */
+    padding-bottom: 56.5%;
+    /* você pode usar outra proporção, por ex. 75% para 4:3 */
+    border: none;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* O iframe se ajusta ao tamanho do container */
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-secao {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }
