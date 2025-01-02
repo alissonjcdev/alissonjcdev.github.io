@@ -98,7 +98,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/EDIÇÃO-PHOTO-01---ALISSON\ 2.webp);
+  background-image: url("/assets/img/EDIÇÃO-PHOTO-01---ALISSON\ 2.webp");
   z-index: 2;
 }
 
