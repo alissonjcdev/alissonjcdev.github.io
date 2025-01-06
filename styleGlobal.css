@@ -1,32 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-@import url("./assets/css/header.css");
-@import url("./assets/css/line-contain.css");
-@import url("./assets/css/hero.css");
-@import url("./assets/css/video-section.css");
-@import url("./assets/css/cases.css");
-@import url("./assets/css/servicos.css");
-@import url("./assets/css/curses.css");
-@import url("./assets/css/text-content.css");
-@import url("./assets/css/screen-loader.css");
-@import url("./assets/css/footer.css");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+@font-face {
+  font-family: "OpenSauceOne-Regular";
+  src: url("./assets/fonts/OpenSauceOne-Regular.woff2") format("woff2"),
+    url("./assets/fonts/OpenSauceOne-Regular.woff") format("woff"),
+    url("./assets/fonts/OpenSauceOne-Regular.woff2") format("woff2"),
+    url("./assets/fonts/OpenSauceOne-Regular.ttf") format("truetype");
+}
+
+@import url(./assets/css/header.css);
+@import url(./assets/css/hero.css);
+@import url(./assets/css/processo.css);
+@import url(./assets/css/cases.css);
+@import url(./assets/css/rodape.css);
+@import url(./assets/css/marquee.css);
+@import url(./assets/css/cta.css);
+@import url(./assets/css/frase.css);
+
+:root {
+  /* Definição de cores */
+  --primary-color: #007bff;
+  --secondary-color: #808080;
+  --background-color: #010102;
+  --text-color: #ffffff;
+
+  /* Espaçamentos */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 40px;
+
+  /* Fontes Open Sauce One */
+  --font-open-sauce-one: "OpenSauceOne-Regular", Helvetica, sans-serif;
+
+  /* Fontes Fjalla One */
+  --font-fjalla-one: "Fjalla One", Helvetica, sans-serif;
+
+  /* Fontes Fira Code */
+  --font-fira-code: "Fira Code", Helvetica, monospace;
+
+  /* Tamanhos de fonte */
+  --font-size-sm: 14px; /* Pequeno médio */
+  --font-size-md: 16px; /* Médio */
+  --font-size-lg: 18px; /* Grande */
+  --font-size-xl: 20px; /* Muito grande */
+  --font-size-xll: 38px; /* Muito grande */
+  --font-size-xlll: 42px; /* Muito grande */
+  --font-size-xxl: 92px; /* Extra grande */
+  --font-size-xxxl: 128px; /* Extra grande */
+  --font-size-xxxxl: 300px; /* Extremamente grande */
+}
 
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: Outfit, Helvetica;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #000000;
-  margin: 0 auto;
-  color: white;
-}
-
-.container {
-  width: 100%;
-  max-width: 1240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #010102;
 }
